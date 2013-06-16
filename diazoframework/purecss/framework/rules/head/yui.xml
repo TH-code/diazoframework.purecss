@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+         xmlns:css="http://namespaces.plone.org/diazo/css"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <after theme="/html/head/title">
+      <script src="http://yui.yahooapis.com/3.10.3/build/yui/yui-min.js"></script>
+  </after>
+
+</rules>

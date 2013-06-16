@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <replace css:content="table">
+    <table class="pure-table pure-table-bordered">
+      <xsl:copy-of select="@*[local-name() != 'class']"/>
+      <xsl:apply-templates select="./*"/>
+    </table>
+  </replace>
+
+  <replace css:content="table.plain">
+    <table class="pure-table pure-table-horizontal">
+      <xsl:copy-of select="@*[local-name() != 'class']"/>
+      <xsl:apply-templates select="./*"/>
+    </table>
+  </replace>
+
+  <replace css:content="table.listing">
+    <table class="pure-table">
+      <xsl:copy-of select="@*[local-name() != 'class']"/>
+      <xsl:apply-templates select="./*"/>
+    </table>
+  </replace>
+
+  <replace css:content="table.listing tr:nth-child(2n+1), tr.odd">
+    <tr class="pure-table-odd">
+      <xsl:apply-templates select="./*"/>
+    </tr>
+  </replace>
+
+  
+</rules>

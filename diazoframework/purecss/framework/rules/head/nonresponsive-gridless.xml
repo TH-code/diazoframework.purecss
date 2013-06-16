@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+         xmlns:css="http://namespaces.plone.org/diazo/css"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Ampersands ar troublesome, workaround with CDATA -->
+  <after theme="/html/head/title">
+      <xsl:text disable-output-escaping="yes">
+        <![CDATA[
+          <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.1.0/base-min.css&pure/0.1.0/buttons-min.css&pure/0.1.0/forms-nr-min.css&pure/0.1.0/menus-nr-min.css&pure/0.1.0/tables-min.css"/>
+        ]]>
+      </xsl:text>
+  </after>
+
+</rules>

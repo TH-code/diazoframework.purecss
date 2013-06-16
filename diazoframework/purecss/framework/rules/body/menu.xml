@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <replace css:content="#portal-globalnav, #content-views">
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+      <ul>
+        <xsl:copy-of select="@*"/>
+        <xsl:apply-templates select="./*"/>
+      </ul>
+    </div>
+  </replace>
+
+  <replace css:content="#portal-globalnav .selected, #content-views .selected">
+    <li class="pure-menu-selected">
+      <xsl:copy-of select="@id"/>
+      <xsl:apply-templates select="./*"/>
+    </li>
+  </replace>
+
+  <replace css:content="#portal-personaltools">
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+      <ul>
+        <xsl:copy-of select="@*"/>
+        <xsl:apply-templates select="./*"/>
+      </ul>
+    </div>
+  </replace>
+
+  <replace css:content="#portal-siteactions">
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+      <ul id="portal-siteactions">
+        <xsl:apply-templates select=".//li"/>
+      </ul>
+    </div>
+  </replace>
+
+  <replace css:content="#portal-colophon">
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+      <ul id="portal-colophon">
+        <xsl:apply-templates select=".//li"/>
+      </ul>
+    </div>
+  </replace>
+
+</rules>
