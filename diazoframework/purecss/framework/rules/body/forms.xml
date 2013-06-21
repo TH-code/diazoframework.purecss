@@ -32,19 +32,6 @@
       </form>
   </replace>
 
-  <replace content="//*[@id='search-filter']">
-      <div>
-          <xsl:copy-of select="@*[local-name() != 'class']"/>
-          <xsl:attribute name="class">pure-g</xsl:attribute>
-          <div class="pure-u-1-2">
-              <xsl:apply-templates select="./fieldset[1]"/>
-          </div>
-          <div class="pure-u-1-2">
-              <xsl:apply-templates select="./fieldset[2]"/>
-          </div>
-      </div>
-  </replace>
-
   <replace css:content=".field">
     <xsl:choose>
         <xsl:when test="./input[@type='checkbox']|./input[@type='radio']">

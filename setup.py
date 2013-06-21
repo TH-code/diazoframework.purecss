@@ -24,6 +24,7 @@ setup(name='diazoframework.purecss',
       install_requires=[
           'setuptools',
           'diazoframework.plone',
+          'diazotheme.purecss',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

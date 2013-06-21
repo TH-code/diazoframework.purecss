@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <replace content="//*[@id='search-filter']">
+      <div>
+          <xsl:copy-of select="@*[local-name() != 'class']"/>
+          <xsl:attribute name="class">pure-g</xsl:attribute>
+          <div class="pure-u-1-2">
+              <xsl:apply-templates select="./fieldset[1]"/>
+          </div>
+          <div class="pure-u-1-2">
+              <xsl:apply-templates select="./fieldset[2]"/>
+          </div>
+      </div>
+  </replace>
+
+<!--
+  <replace content="//*[@id='search-results-bar']">
+      <div class="horizontal-menu">
+        <ul>
+          <xsl:for-each select="./*">
+            <li>
+              <xsl:apply-templates select="."/>
+            </li>
+          </xsl:for-each>
+        </ul>
+      </div>
+  </replace>
+
+  <replace css:content="#search-results-bar .actionMenu">
+    <li>
+      <a href="#">
+        <xsl:copy-of select="./dt/a/@*|./dt/a/text()"/>
+      </a>
+      <ul>
+        <li><xsl:apply-templates select="dd/*"/></li>
+      </ul>
+    </li>
+  </replace>
+-->
+
+</rules>
