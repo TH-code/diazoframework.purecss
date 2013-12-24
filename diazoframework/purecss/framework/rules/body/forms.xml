@@ -8,7 +8,9 @@
       <form>
           <xsl:copy-of select="@*[local-name() != 'class']"/>
           <xsl:attribute name="class">pure-form pure-form-stacked</xsl:attribute>
-          <xsl:apply-templates select="./*"/>
+          <fieldset>
+              <xsl:apply-templates select="./*"/>
+          </fieldset>
       </form>
   </replace>
 
@@ -102,5 +104,7 @@
   <strip css:content=".searchSection"/>
   <strip css:content=".formControls"/>
   <strip css:content="#search-filter div, #search-filter span, #search-filter br"/>
+
+  <drop css:content=".portletLogin br"/>
 
 </rules>

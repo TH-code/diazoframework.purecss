@@ -31,5 +31,12 @@
     </tr>
   </replace>
 
+  <replace css:content=".portletCalendar table">
+    <table class="pure-table pure-table-horizontal">
+      <xsl:copy-of select="@*[local-name() != 'class']"/>
+      <xsl:apply-templates select="./*"/>
+    </table>
+  </replace>
+
   
 </rules>
