@@ -14,7 +14,7 @@
       </form>
   </replace>
 
-  <replace content="//form[@id='searchGadget_form']">
+  <replace content="//form[contains(@action, '@@search')]">
       <form>
           <xsl:copy-of select="@*[local-name() != 'class']"/>
           <xsl:attribute name="class">pure-form pure-form-search</xsl:attribute>
