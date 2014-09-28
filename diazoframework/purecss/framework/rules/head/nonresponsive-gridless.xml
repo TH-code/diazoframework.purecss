@@ -8,7 +8,7 @@
   <after theme="/html/head/title">
       <xsl:text disable-output-escaping="yes">
         <![CDATA[
-          <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.1.0/base-min.css&pure/0.1.0/buttons-min.css&pure/0.1.0/forms-nr-min.css&pure/0.1.0/menus-nr-min.css&pure/0.1.0/tables-min.css"/>
+          <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/buttons-min.css&pure/0.5.0/forms-nr-min.css&pure/0.5.0/menus-nr-min.css&pure/0.5.0/tables-min.css"/>
         ]]>
       </xsl:text>
   </after>
